@@ -1,0 +1,20 @@
+<!-- templates/base.html -->
+<!DOCTYPE html> 
+<html lang="ru">          
+  <head>       
+  </head>
+  <body>       
+    <header>
+        {% block title %}
+        Контент TITLE из блока content :(
+      {% endblock %}
+    </header>
+    <main>
+      {% block content %}
+        Контент BASE из блока content :(
+      {% endblock %}
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html> 

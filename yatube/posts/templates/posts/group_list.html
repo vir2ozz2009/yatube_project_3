@@ -1,5 +1,4 @@
 <!DOCTYPE html> <!-- Используется html 5 версии -->
-{% extends 'base.html' %} 
 <html lang="ru"> <!-- Язык сайта - русский -->
   <head>    
     <meta charset="utf-8"> <!-- Кодировка сайта -->
@@ -14,14 +13,13 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Подключен файл со стандартными стилями бустрап -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Последние обновления на сайте</title>
+    <title>Лев Толстой – зеркало русской революции.</title>
   </head>
   <body>
-    {% block title %}
     <header>
       {% include 'includes/header.html' %}
       <!-- Использованы классы бустрапа для создания типовой навигации с логотипом -->
-      <!-- В дальнейшем тут будет создано полноценное меню -->
+      <!-- В дальнейшем тут будет создано полноценное меню -->    
       <nav class="navbar navbar-light" style="background-color: lightskyblue">
         <div class="container">
           <a class="navbar-brand" href="index.html">
@@ -32,12 +30,13 @@
         </div>
       </nav>      
     </header>
-    {% endblock %}
-    {% block content %}
-    <main> 
+    <main>
       <!-- класс py-5 создает отступы сверху и снизу блока -->
-      <div class="container py-5">     
-        <h1>Последние обновления на сайте</h1>
+      <div class="container py-5">
+        <h1>Лев Толстой – зеркало русской революции.</h1>
+        <p>
+          Группа тайных поклонников графа.
+        </p>
         <article>
           <ul>
             <li>
@@ -54,8 +53,7 @@
             къ казачьей батареѣ; совѣтъ, которому я не послѣдую. Желчно спорилъ вечеромъ съ Фриде 
             и Бабарыкинымъ, ругалъ Сержпутовскому и ничего не сдѣлалъ, вотъ 3 упрека, которыя дѣлаю с
             ебѣ за нынѣшній день. (3)
-          </p>
-          <a href="group_list.html">все записи группы</a>
+          </p>         
         </article>
         <hr>
         <article>
@@ -78,8 +76,7 @@
             чтобы не пойдти пошляться. Идя отъ ужина, мы съ Тишк[евичемъ] остановились у бардели и насъ 
             накрылъ Крыжановскій, что, признаюсь, было мнѣ не совсѣмъ пріятно. Упрекаю себя за 
             безхарактерность, что не высидѣлъ дома, и зa праздность цѣлаго дня. Это главный пунктъ. (2)
-          </p>
-          <a href="group_list.html">все записи группы</a>
+          </p>      
         </article>
         <hr>
         <article>
@@ -99,20 +96,15 @@
             Гембичомъ, потомъ болталъ съ Шубинымъ и съ Сашей Горчаковымъ. — Исключая праздности, 
             днемъ своимъ очень доволенъ. (1)
           </p>
-          <a href="group_list.html">все записи группы</a>
         </article>
         <!-- под последним постом нет линии -->
       </div>  
     </main>
-    {% endblock %}
-    <!-- Использованы классы бустрапа: -->
-    <!-- border-top: создаёт тонкую линию сверху блока -->
-    <!-- text-center: выравнивает текстовые блоки внутри блока по центру -->
-    <!-- py-3: контент внутри размещается с отступом сверху и снизу -->         
-    <footer class="border-top text-center py-3">
-      {% include 'includes/footer.html' %}
-      <!-- тег span используется для добавления нужных стилей отдельным участкам текста --> 
-      <p>© 2020 Copyright <span style="color:red">Ya</span>tube</p>    
+    <footer class="page-footer font-small blue border-top">
+      {% include 'includes/footer.html' %} 
+      <div class="footer-copyright text-center py-3">© 2020 Copyright 
+        <p><span style="color:red">Ya</span>tube</p> 
+      </div>    
     </footer>
   </body>
 </html>
